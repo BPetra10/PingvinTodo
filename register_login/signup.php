@@ -1,6 +1,30 @@
 <?php
     session_start();
     include("connection.php");
+    include("functions.php");
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $user_name= $_POST["user_name"];
+        $password=$_POST["password"];
+        $password2=$_POST["password2"];
+
+        if(!empty($user_name)&&!empty($password)&&!empty($password2)){
+            $query = "select * from users where user_name= '$user_name'";
+            $result = mysqli_query($con, $query);
+            check_username($result, $user_name);
+            check_password($password, $password2);
+
+            //save to database
+            
+            $query="insert into users (user_name, password) values ('$user_name', '$password')";
+            mysqli_query($con, $query);
+            header("Location: signup.php");
+            
+            die;
+        }else{
+            $_SESSION['status']="All fields must be filled in!";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +37,13 @@
 
 </head>
 <body>
+
+<?php if(isset($_SESSION['status'])){ ?>
+            <?php echo $_SESSION['status'];
+            unset($_SESSION['status']);
+}?>
+
+
 <div id="box">
         <form method="post">
             <h2>Sign up</h2>
