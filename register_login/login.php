@@ -2,6 +2,7 @@
     session_start();
     include("connection.php");
     include("functions.php");
+    check_logout($con);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $user_name= $_POST["user_name"];

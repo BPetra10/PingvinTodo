@@ -2,6 +2,7 @@
     session_start();
     include("connection.php");
     include("functions.php");
+    check_login($con);
 ?>
 
 <!DOCTYPE html>
@@ -14,5 +15,6 @@
 <body>
     <h1> Hello! </h1>
     <p>You are logged in as <?php echo $_SESSION['user_name'] ?></p>
+    <a href="logout.php">Sign out</a>
 </body>
 </html>
