@@ -47,16 +47,29 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
         <?php unset($_SESSION['status']);}?>
-
-
 <div id="box">
         <form method="post">
             <h2>Sign up</h2>
 
-            <p>Username:</p>
+            <p style="display: inline">Username:</p>
+            <span class="username_info">?</span>
+            <div class="test">
+               <p> Username can't contain any special characters or only numbers, 
+                and it has to be between 6 and 16 characters!</p>
+            </div>
             <input class="text" type="text" name="user_name" maxlength="16">
 
-            <p>Password:</p>
+            <p style="display: inline">Password:</p>
+            <span class="password_info">?</span>
+            <div class="test2">
+                <p>
+                Password must be between 8 and 16 characters, and must contain (at least one of each):
+                    <br>> Capital letter
+                    <br>> Lowercase letter
+                    <br>> Number
+                    <br>> Special character
+                </p>
+            </div>
             <input class="text" type="password" name="password" maxlength="16">
 
             <p>Repeat password:</p>
