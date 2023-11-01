@@ -33,5 +33,17 @@ session_start();
         </div>
         </div>
     </header>
+    <div class="container">
+        <h1>Create TODO</h1>
+        <h1>Create Note</h1>
+    </div>
+    <div class="button-container">
+        <div class="button">
+            <a href="../todo/todo.php">+</a>
+        </div>
+        <div class="button">
+            <a href="#">+</a>
+        </div>
+    </div>
 </body>
 </html>
