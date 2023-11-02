@@ -15,7 +15,20 @@
                 <button type="submit" name="add" id="btn">ADD</button>
             </div>
             <ul class="list">
+                <li class="item" style="background-color:crimson">
+                <p>Testszöveg</p>
+                    <div class="icon-container">
+                        <button type="submit" name="checked" id="check"><i class="icon fa fa-check-square-o"></i></button>
+                        <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
+                        <button type="submit" name="updated" id="update"><i class="icon fa fa-pencil-square-o"></i></button>
+                        <button type="submit" name="marked_off"><i class="icon fa fa-exclamation"></i></button>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+            <ul class="list">
                 <li class="item">
+                <p>Testszöveg</p>
                     <div class="icon-container">
                         <button type="submit" name="checked" id="check"><i class="icon fa fa-check-square-o"></i></button>
                         <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
@@ -27,6 +40,7 @@
             <hr>
             <ul class="list">
                 <li class="item fade">
+                <p class="deleted-text"><span>Törölt szöveg teszt</span></p>
                     <div class="icon-container">
                         <button type="submit" id="check"><i class="icon fa fa-check-square-o hidden"></i></button>
                         <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
