@@ -1,0 +1,31 @@
+.item{
+    background-color: #e9d985;
+    display: flex;
+    font-size: x-large;
+    padding: 0.8em;
+    margin: 0.625em;
+    border-radius: 0.3em;
+}
+.icon-container{
+    flex-basis: 25%;
+}
+.icon-container button{
+    background-color: transparent;
+    border:none;
+    font-size: x-large;
+}
+.icon{
+    color:#222E50;
+    cursor: pointer;
+    font-size: xx-large;
+    transition: all 0.3s;
+}
+.icon:hover{
+    transform: scale(1.5);
+}
+.hidden{
+    visibility: hidden;
+}
+.fade{
+    background-color:  #bcd8c1;
+}
