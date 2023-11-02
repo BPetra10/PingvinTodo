@@ -8,3 +8,13 @@ PRIMARY KEY (`uid`)) ENGINE = InnoDB;
 
 ALTER TABLE `todoapp`.`users` ADD INDEX(`user_name`);
 ALTER TABLE `todoapp`.`users` ADD INDEX(`password`);
+
+CREATE TABLE `todoapp`.`todolist` 
+(`id` INT NOT NULL AUTO_INCREMENT,
+`user_id` BIGINT NOT NULL, 
+`tasks` VARCHAR(200) NOT NULL, 
+`status` TINYINT NOT NULL, 
+`important` TINYINT NOT NULL, 
+PRIMARY KEY (`id`), 
+FOREIGN KEY (user_id) REFERENCES users(uid)
+) ENGINE = InnoDB;
