@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#007991;
+}
+.site_title{
+    text-align: center;
+    color:#222E50;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 80%;
+    max-width: 40%;
+}
+.input-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+}
+#task{
+    width: 80%;
+    height: 2.5em;
+    font-size: large;
+    border-radius: 0.5em;
+    box-shadow: 0.3em 0.3em 0.3em 0.1em black;
+}
+#btn{
+    margin-left: 0.5em;
+    font-size: large;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #222E50;
+    color: white;
+    box-shadow: 0.3em 0.3em 0.5em 0.1em black;
+}
+#btn:hover{
+    cursor: pointer;
+}
