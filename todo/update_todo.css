@@ -49,3 +49,9 @@ form{
 #btn:hover{
     cursor: pointer;
 }
+.data{
+    color: #e9d985;
+    text-align: center;
+    padding-top: 1em;
+    font-size: large;
+}

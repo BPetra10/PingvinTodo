@@ -12,6 +12,17 @@ include("functions.php");
     <link rel="stylesheet" href="todo.css"> 
 </head>
 <body>
+    <div class='parent'>
+        <div class='child'>
+            <a href="../register_login/index.php">
+                <img src="https://i.ibb.co/YNppMLd/pingvin.png" alt="Penguin Button" class="header-icon">
+            </a>
+        </div>
+        <div class='child'><h1 class="site_title">TODO List</h1></div>
+    </div>
+    <p class="data">You are logged in as : <?php echo $_SESSION['user_name'];?> &nbsp; 
+    <a href="../register_login/logout.php" class="data">You want to sign out?</a>
+    </p>
     <div class="container">
         <form action="handleActions.php" method="post">
             <div class="input-container">

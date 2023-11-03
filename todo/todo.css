@@ -39,3 +39,15 @@
 .fade{
     background-color:  #bcd8c1;
 }
+.header-icon{
+    width: 5em;
+    border-radius: 50%;
+}
+.parent{
+    padding-top: 1em;
+    text-align: center;
+}
+.child{
+    display: inline-block;
+    vertical-align: middle;
+}
