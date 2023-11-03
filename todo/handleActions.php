@@ -1,0 +1,13 @@
+<?php
+require("functions.php");
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    if(isset($_POST["add"]))
+    {
+        if($_POST["task"]!=NULL)
+        {
+            add_todos($_POST["task"]);
+        }
+    }
+}
+?>

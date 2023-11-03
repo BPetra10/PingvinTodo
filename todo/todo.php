@@ -1,3 +1,6 @@
+<?php
+include("functions.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="post">
+        <form action="handleActions.php" method="post">
             <div class="input-container">
                 <input type="text" name="task" id="task">
                 <button type="submit" name="add" id="btn">ADD</button>
@@ -28,14 +31,20 @@
             </ul>
             <hr>
             <ul class="list">
+                <?php 
+                    $itemList = get_todos();
+                    while($row=$itemList->fetch_assoc())
+                    {
+                ?>
                 <li class="item">
-                <p>Testszöveg</p>
+                <p><?php echo $row["tasks"]; ?></p>
                     <div class="icon-container">
                         <button type="submit" name="checked" id="check"><i class="icon fa fa-check-square-o"></i></button>
                         <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
                         <button type="submit" name="updated" id="update"><i class="icon fa fa-pencil-square-o"></i></button>
                         <button type="submit" name="marked"><i class="icon fa fa fa-exclamation"></i></button>
                     </div>
+                    <?php } ?>
                 </li>
             </ul>
             <hr>
