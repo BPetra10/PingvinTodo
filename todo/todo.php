@@ -30,15 +30,21 @@ include("functions.php");
                 <button type="submit" name="add" id="btn">ADD</button>
             </div>
             <ul class="list">
+                <?php 
+                    $itemList = get_todos_important();
+                    while($row=$itemList->fetch_assoc())
+                    {
+                ?>
                 <li class="item" style="background-color:crimson">
-                <p>Testszöveg</p>
+                    <p><?php echo $row["tasks"]; ?></p>
                     <div class="icon-container">
-                        <button type="submit" name="checked" id="check"><i class="icon fa fa-check-square-o"></i></button>
-                        <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
-                        <button type="submit" name="updated" id="update"><i class="icon fa fa-pencil-square-o"></i></button>
-                        <button type="submit" name="marked_off"><i class="icon fa fa-exclamation"></i></button>
+                        <button type="submit" name="checked" id="check" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-check-square-o"></i></button>
+                        <button type="submit" name="deleted" id="delete" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-trash"></i></button>
+                        <button type="submit" name="updated" id="update" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-pencil-square-o"></i></button>
+                        <button type="submit" name="marked_off" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-exclamation"></i></button>
                     </div>
                 </li>
+                <?php } ?>
             </ul>
             <hr>
             <ul class="list">
@@ -48,27 +54,33 @@ include("functions.php");
                     {
                 ?>
                 <li class="item">
-                <p><?php echo $row["tasks"]; ?></p>
+                    <p><?php echo $row["tasks"]; ?></p>
                     <div class="icon-container">
-                        <button type="submit" name="checked" id="check"><i class="icon fa fa-check-square-o"></i></button>
-                        <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
-                        <button type="submit" name="updated" id="update"><i class="icon fa fa-pencil-square-o"></i></button>
-                        <button type="submit" name="marked"><i class="icon fa fa fa-exclamation"></i></button>
+                        <button type="submit" name="checked" id="check" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-check-square-o"></i></button>
+                        <button type="submit" name="deleted" id="delete" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-trash"></i></button>
+                        <button type="submit" name="updated" id="update" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-pencil-square-o"></i></button>
+                        <button type="submit" name="marked" value="<?php echo $row["id"]; ?>"><i class="icon fa fa fa-exclamation"></i></button>
                     </div>
-                    <?php } ?>
                 </li>
+                <?php } ?>
             </ul>
             <hr>
             <ul class="list">
+            <?php 
+                    $itemList = get_todos_checked();
+                    while($row=$itemList->fetch_assoc())
+                    {
+                ?>
                 <li class="item fade">
-                <p class="deleted-text"><span>Törölt szöveg teszt</span></p>
+                    <p class="deleted-text"><span><?php echo $row["tasks"]; ?></span></p>
                     <div class="icon-container">
                         <button type="submit" id="check"><i class="icon fa fa-check-square-o hidden"></i></button>
-                        <button type="submit" name="deleted" id="delete"><i class="icon fa fa-trash"></i></button>
+                        <button type="submit" name="deleted" id="delete" value="<?php echo $row["id"]; ?>"><i class="icon fa fa-trash"></i></button>
                         <button type="submit" id="update"><i class="icon fa fa-pencil-square-o hidden"></i></button>
                         <button type="submit" name="marked"><i class="icon fa fa-exclamation hidden"></i></button>
                     </div>
                 </li>
+                <?php } ?>
             </ul>
         </form>
     </div>
