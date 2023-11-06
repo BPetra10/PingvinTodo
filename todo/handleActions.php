@@ -17,6 +17,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     {
        delete_todos($_POST["deleted"]);
     }
+    else if(isset($_POST["updated"]))
+    {
+        update_todos($_POST["updated"]);
+    }
     else if(isset($_POST["marked"]))
     {
         mark_as_important($_POST["marked"]);

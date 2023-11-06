@@ -61,6 +61,12 @@ function delete_todos($id)
     $result = $con->query($query);
 }
 
+function update_todos($id)
+{
+   header("Location: update_todo.php?id=".$id);
+   die();
+}
+
 function mark_as_important($id){
     $con = make_connection();
     $query = "UPDATE todolist SET important='1' WHERE id='$id'";
