@@ -4,7 +4,42 @@ session_start();
 require("../register_login/connection.php");
 require("../register_login/functions.php");
 
-$user_data=check_login($con);      
+$user_data=check_login($con);   
+
+if(isset($_POST["update_row"]))
+{
+    $con = make_connection();
+    $userid = $_SESSION['uid'];
+    $id = $_POST["id"];
+    $update = $_POST["task"];
+    $same_select = "SELECT tasks FROM todolist WHERE id='$id' AND user_id='$userid'";
+    $same_result = $con->query($same_select);
+    $same = mysqli_fetch_assoc($same_result);
+
+    if(empty($update))
+    {
+        echo '<p class="alert"><span>Task field is empty!</span></p>';
+    }
+    else if($update==$same["tasks"])
+    {
+        echo '<p class="alert"><span>Given task is the same as before!</span></p>';
+    }else{
+        $check_if_db_contains ="SELECT tasks FROM todolist WHERE tasks='$update' AND user_id='$userid'";
+        $db_contains = $con?->query($check_if_db_contains);
+        if(!is_null($db_contains))
+        {
+            $same = $db_contains->fetch_assoc();
+            if($update!=$same["tasks"])
+            {
+                $query = "UPDATE todolist set tasks='$update' WHERE id='$id'";
+                $result = $con->query($query);
+                header("Location:todo.php");
+            }else{
+                echo '<p class="alert"><span>Given task is in your list!</span></p>';
+            }
+        }
+    }
+}    
 ?>
 <!DOCTYPE html>
 <html lang="en">
