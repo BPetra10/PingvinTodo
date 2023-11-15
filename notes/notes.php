@@ -24,4 +24,33 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row justify-content-center"></div>
+        <div class="col-lg-10">
+            <h1>Your notes</h1>
+            <?php
+            $result = get_notes();
+            //add no notes varriable 
+            while ($row = $result->fetch_assoc()) {
+                $noNotes = false;
+                echo '<div class="card my-3">
+                    <div class="card-body">
+                    <h5 class="card-title">' . $row["title"] . '</h5>
+                    <p class="card-text">' . $row["description"] . '</p>
+                    <form method="POST" action="actionHandler.php">
+                    <button type="button" class="btn btn-primary edit" data-toggle="modal" data-target="#exampleModal" id="'. $row["id"] .'">Edit</button>
+                    <input type="hidden" name="noteId" value="'. $row["id"] .'"> <!-- Updated ID from "hidden" to "noteId" -->
+                    <button type="submit" class="btn-btn-danger" name="deleteNote" value="'. $row["id"] .'">Delete</button>
+                    </form>
+                </div>
+            </div>';
+            }
+            //add if no notes tab
+            ?>
+            </div>
+        </div>
+    </div>
+
+
 </body>
