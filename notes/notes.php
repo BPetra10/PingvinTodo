@@ -31,7 +31,7 @@
             <h1>Your notes</h1>
             <?php
             $result = get_notes();
-            //add no notes varriable 
+            $noNotes = true;
             while ($row = $result->fetch_assoc()) {
                 $noNotes = false;
                 echo '<div class="card my-3">
@@ -46,7 +46,15 @@
                 </div>
             </div>';
             }
-            //add if no notes tab
+            if ($noNotes) {
+                echo '<div class="card my-3">
+                <div class="card-body">
+                <h5 class="card-title">You have no notes!</h5>
+                <p class="card-text">Add some notes above! </p>
+                </div>
+                ';
+            }
+            ;
             ?>
             </div>
         </div>
