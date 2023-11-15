@@ -1,0 +1,53 @@
+.item{
+    background-color: #e9d985;
+    display: flex;
+    font-size: x-large;
+    padding: 0.8em;
+    margin: 0.625em;
+    border-radius: 0.3em;
+}
+.item p{
+    flex-basis: 75%;
+}
+.icon-container{
+    flex-basis: 25%;
+}
+.icon-container button{
+    background-color: transparent;
+    border:none;
+    font-size: x-large;
+}
+.icon{
+    color:#222E50;
+    cursor: pointer;
+    font-size: xx-large;
+    transition: all 0.3s;
+}
+.icon:hover{
+    transform: scale(1.5);
+}
+.hidden{
+    visibility: hidden;
+}
+.deleted-text{
+    text-decoration: line-through;
+    color: crimson;
+}
+.deleted-text span{
+    color:black;
+}
+.fade{
+    background-color:  #bcd8c1;
+}
+.header-icon{
+    width: 5em;
+    border-radius: 50%;
+}
+.parent{
+    padding-top: 1em;
+    text-align: center;
+}
+.child{
+    display: inline-block;
+    vertical-align: middle;
+}
