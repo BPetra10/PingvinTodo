@@ -2,6 +2,9 @@
     <?php
     session_start();
     include_once("./templates/head.php");
+    require("../register_login/connection.php");
+    require("../register_login/functions.php");
+    require_once("functions.php");
 ?>
 
 <div class="econtainer my-4">
