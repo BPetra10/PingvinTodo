@@ -1,14 +1,18 @@
 <link rel="stylesheet" href="stilus.css">
+
 <body>
     <?php
     session_start();
     include_once("./templates/head.php");
+    echo "<link rel='stylesheet' href='stilus.css'>";
     require("../register_login/connection.php");
     require("../register_login/functions.php");
+    require("./editModal.php");
     require_once("functions.php");
-?>
 
-<div class="econtainer my-4">
+    ?>
+
+    <div class="econtainer my-4">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <form class="form" action="actionHandler.php" method="POST">
@@ -25,7 +29,6 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row justify-content-center"></div>
         <div class="col-lg-10">
@@ -57,9 +60,9 @@
             }
             ;
             ?>
-            </div>
         </div>
     </div>
+</div>
 
 
 </body>
