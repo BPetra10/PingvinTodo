@@ -1,0 +1,30 @@
+body{
+    background-color:#007991;
+}
+.modal-header{
+    background-color:#007991;
+}
+.form-label{
+    color: #E9D985;
+    font-size: 20px;
+    font-family: Impact, fantasy;
+    font-weight: 100;
+}
+.form-control{
+    background-color: #BCD8C1;
+    font-family:Georgia, 'Times New Roman', Times;
+}
+.btn-btn-primary{
+    background-color: #439A86;
+    font-family:Georgia, 'Times New Roman', Times;
+    color: azure;
+    border: 0px;
+    border-radius: 3px;
+}
+.btn-btn-danger{
+    background-color:#222E50;
+    font-family:Georgia, 'Times New Roman', Times;
+    color: azure;
+    border: 0px;
+    border-radius: 3px;
+}

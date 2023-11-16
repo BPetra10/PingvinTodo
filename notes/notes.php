@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="stilus.css">
 <body>
     <?php
     session_start();
