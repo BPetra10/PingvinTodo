@@ -1,5 +1,5 @@
 <?php
-//ASK
+
 
 require("functions.php");
 require("editModal.php");
@@ -15,5 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         delete_note($noteId);
         header("Location: notes.php");
         die();
-    } };
-    
+    } 
+    else {
+        $editdesc = $_POST['editDesc'];
+        $edittitle = $_POST['editTitle'];
+        $noteId = $_POST['editId'];
+        change_note($edittitle, $editdesc, $noteId);
+        header("Location: notes.php");
+        die();
+    } 
+};
+?>

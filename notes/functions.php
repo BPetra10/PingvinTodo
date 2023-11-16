@@ -35,3 +35,11 @@ function delete_note($id)
     $result = $con->query($deleteQuery);
    // return $result;
 }
+
+function change_note($editTitle, $editDesc, $id) {
+    $con = make_connection();
+    $updateQuery="UPDATE `notes` SET `title`='$editTitle',`description`='$editDesc' WHERE `id`= '$id' ";
+    $result = $con->query($updateQuery);
+    //echo $editTitle, $editDesc, $id;
+    //return $result; 
+}
