@@ -64,5 +64,24 @@
     </div>
 </div>
 
+<script>
+const edit = document.querySelectorAll(".edit");
+const editTitle = document.getElementById("editTitle"); 
+const editDesc = document.getElementById("editDesc"); 
+const hiddenInput = document.getElementById("hidden");
+console.log(edit,editTitle,editDesc);
+            edit.forEach(element =>{
+                element.addEventListener("click",()=> {
+                    console.log(element.parentElement.parentElement.children[0].innerHTML);
+                    console.log(element.parentElement.parentElement.children[1].innerHTML);
+                    const titleText=element.parentElement.parentElement.children[0].innerHTML
+                    const descText=element.parentElement.parentElement.children[1].innerHTML
+                    editTitle.value=titleText;
+                    editDesc.value=descText;
+                    hiddenInput.value=element.id;
+                    console.log(hiddenInput);
+                });
+            });
 
+</script>
 </body>
