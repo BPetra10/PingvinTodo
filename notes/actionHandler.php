@@ -19,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else {
         $editdesc = $_POST['editDesc'];
         $edittitle = $_POST['editTitle'];
-        $noteId = $_POST['editId'];
+        $noteId = $_POST['hiddenInput'];
+        
         change_note($edittitle, $editdesc, $noteId);
         header("Location: notes.php");
         die();

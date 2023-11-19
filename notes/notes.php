@@ -79,7 +79,7 @@ console.log(edit,editTitle,editDesc);
                     editTitle.value=titleText;
                     editDesc.value=descText;
                     hiddenInput.value=element.id;
-                    console.log(hiddenInput);
+                    console.log("hidden input:" + hiddenInput.value);
                 });
             });
 
