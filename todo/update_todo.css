@@ -11,7 +11,7 @@ body{
     color:#222E50;
     font-variant: small-caps;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 .container{
     display: flex;
@@ -53,5 +53,15 @@ form{
     color: #e9d985;
     text-align: center;
     padding-top: 1em;
-    font-size: large;
+    font-size: 1.5em;
+   
+}
+.link{
+    color: #e9d985;
+    padding-left: 0.5em;
+}
+.data > .link:hover {
+    color: #222E50;
+    padding-left: 0.6em;
+    font-style: italic;
 }
