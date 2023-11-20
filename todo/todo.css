@@ -40,7 +40,9 @@
     background-color:  #bcd8c1;
 }
 .header-icon{
-    width: 5em;
+    width: 4.5em;
+    float: left;
+    margin-right: 1em;
     border-radius: 50%;
 }
 .parent{
@@ -50,4 +52,9 @@
 .child{
     display: inline-block;
     vertical-align: middle;
+}
+hr{
+   background-color: #222E50;
+   height: 0.3em;
+   border: none;
 }

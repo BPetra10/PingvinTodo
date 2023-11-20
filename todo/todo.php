@@ -20,8 +20,8 @@ include("functions.php");
         </div>
         <div class='child'><h1 class="site_title">TODO List</h1></div>
     </div>
-    <p class="data">You are logged in as : <?php echo $_SESSION['user_name'];?> &nbsp; 
-    <a href="../register_login/logout.php" class="data">You want to sign out?</a>
+    <p class="data">You are logged in as: <?php echo $_SESSION['user_name'];?> &nbsp; 
+    <a href="../register_login/logout.php" class="link">You want to sign out?</a>
     </p>
     <div class="container">
         <form action="handleActions.php" method="post">
