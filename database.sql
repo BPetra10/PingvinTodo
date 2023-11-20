@@ -16,5 +16,14 @@ CREATE TABLE `todoapp`.`todolist`
 `status` TINYINT NOT NULL, 
 `important` TINYINT NOT NULL, 
 PRIMARY KEY (`id`), 
-FOREIGN KEY (user_id) REFERENCES users(uid)
-) ENGINE = InnoDB;
+FOREIGN KEY (user_id) REFERENCES users(uid)) 
+ENGINE = InnoDB;
+
+CREATE TABLE todoapp.notes 
+(`id` int(11) NOT NULL,
+`userid` bigint(20) NOT NULL,
+`title` varchar(255) NOT NULL,
+`description` text NOT NULL,
+PRIMARY KEY (`id`), 
+FOREIGN KEY (userid) REFERENCES users(uid)
+)ENGINE = InnoDB;
