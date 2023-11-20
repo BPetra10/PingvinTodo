@@ -126,7 +126,7 @@ session_start();
             <a href="../todo/todo.php">+</a>
         </div>
         <div class="button">
-            <a href="#">+</a>
+            <a href="../notes/notes.php">+</a>
         </div>
     </div>
 </body>
