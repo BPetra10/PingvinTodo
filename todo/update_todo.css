@@ -30,7 +30,8 @@ form{
     margin: 1em auto;
 }
 #task{
-    width: 80%;
+    width: 75%;
+    margin-right: 1em;
     height: 2.5em;
     font-size: large;
     border-radius: 0.5em;
@@ -39,7 +40,7 @@ form{
 #btn{
     margin-left: 0.5em;
     font-size: large;
-    padding: 1em;
+    padding: 0.8em 1.5em 0.8em 1.5em;
     border-radius: 0.5em;
     border: none;
     background-color: #222E50;

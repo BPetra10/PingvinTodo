@@ -53,3 +53,8 @@
     display: inline-block;
     vertical-align: middle;
 }
+hr{
+   background-color: #222E50;
+   height: 0.3em;
+   border: none;
+}
