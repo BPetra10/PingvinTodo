@@ -4,7 +4,7 @@ session_start();
 require_once "../register_login/connection.php";
 require_once "../register_login/functions.php";
 
-$user_data=check_login($con);   
+$user_data=check_login($con);
 
 if(isset($_POST["update_row"]))
 {
@@ -39,7 +39,7 @@ if(isset($_POST["update_row"]))
             }
         }
     }
-}    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +64,7 @@ if(isset($_POST["update_row"]))
 </head>
 <body>
 <h1 class="site_title" style="padding-top: 0.5em;">TODO List Update</h1>
-<p class="data">You are logged in as : <?php echo $_SESSION['user_name'];?> &nbsp; 
+<p class="data">You are logged in as : <?php echo $_SESSION['user_name'];?>&nbsp;
 <a href="../register_login/logout.php" class="link">You want to sign out?</a></p>
 <div class="container">
     <form method="post">

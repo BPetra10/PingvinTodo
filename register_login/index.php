@@ -3,8 +3,8 @@ session_start();
 
     require_once "connection.php";
     require_once "functions.php";
-    
-    $user_data=check_login($con);    
+
+    $user_data=check_login($con);
 ?>
 <!DOCTYPE html>
 <html>

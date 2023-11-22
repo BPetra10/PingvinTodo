@@ -5,8 +5,8 @@ session_start();
 require_once "../register_login/connection.php";
 require_once "../register_login/functions.php";
 
-$user_data=check_login($con);    
-    
+$user_data=check_login($con);
+
 function add_todos($value)
 {
     $con = make_connection();
@@ -20,7 +20,7 @@ function add_todos($value)
         {
             $query = "INSERT INTO todolist(id,user_id,tasks,status,important) VALUES(NULL,'$userid','$value','0','0')";
             $con->query($query);
-        }  
+        }
     }
 }
 function get_todos()
