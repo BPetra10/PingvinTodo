@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         add_note($_POST["title"], $_POST["desc"]);
         header(LOCATION);
         die();
-    } else if (isset($_POST["deleteNote"])) {
+    } elseif (isset($_POST["deleteNote"])) {
         $noteId = $_POST["noteId"];
         delete_note($noteId);
         header(LOCATION);

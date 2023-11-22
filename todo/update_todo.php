@@ -20,7 +20,7 @@ if(isset($_POST["update_row"]))
     {
         echo '<p class="alert"><span>Task field is empty!</span></p>';
     }
-    else if($update==$same["tasks"])
+    elseif($update==$same["tasks"])
     {
         echo '<p class="alert"><span>Given task is the same as before!</span></p>';
     }else{
