@@ -28,24 +28,21 @@ function get_todos()
     $con = make_connection();
     $userid = $_SESSION['uid'];
     $query = "SELECT id,tasks FROM todolist WHERE status='0' AND important='0' AND user_id='$userid'";
-    $result = $con->query($query);
-    return $result;
+    return $con->query($query);
 }
 function get_todos_important()
 {
     $con = make_connection();
     $userid = $_SESSION['uid'];
     $query = "SELECT id,tasks FROM todolist WHERE status='0' AND important='1' AND user_id='$userid'";
-    $result = $con->query($query);
-    return $result;
+    return $con->query($query);
 }
 function get_todos_checked()
 {
     $con = make_connection();
     $userid = $_SESSION['uid'];
     $query = "SELECT id,tasks FROM todolist WHERE status='1' AND user_id='$userid'";
-    $result = $con->query($query);
-    return $result;
+    return $con->query($query);
 }
 function status_update($id)
 {
