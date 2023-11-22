@@ -15,4 +15,3 @@ function make_connection()
     return $GLOBALS['con'];
 }
 
-?>

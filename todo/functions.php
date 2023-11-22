@@ -75,4 +75,3 @@ function unmark($id){
     $query = "UPDATE todolist SET important='0' WHERE id='$id'";
     $result = $con->query($query);
 }
-?>

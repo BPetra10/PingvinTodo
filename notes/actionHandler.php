@@ -15,15 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         delete_note($noteId);
         header(LOCATION);
         die();
-    } 
+    }
     else {
         $editdesc = $_POST['editDesc'];
         $edittitle = $_POST['editTitle'];
         $noteId = $_POST['hiddenInput'];
-        
+
         change_note($edittitle, $editdesc, $noteId);
         header(LOCATION);
         die();
-    } 
+    }
 };
-?>
+
