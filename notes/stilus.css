@@ -12,18 +12,18 @@ body{
 }
 .form-control{
     background-color: #BCD8C1;
-    font-family:Georgia, 'Times New Roman', Times;
+    font-family:Georgia, 'Times New Roman', Times, fantasy;
 }
 .btn-btn-primary{
     background-color: #439A86;
-    font-family:Georgia, 'Times New Roman', Times;
+    font-family:Georgia, 'Times New Roman', Times, fantasy;
     color: azure;
     border: 0px;
     border-radius: 3px;
 }
 .btn-btn-danger{
     background-color:#222E50;
-    font-family:Georgia, 'Times New Roman', Times;
+    font-family:Georgia, 'Times New Roman', Times, fantasy;
     color: azure;
     border: 0px;
     border-radius: 3px;
