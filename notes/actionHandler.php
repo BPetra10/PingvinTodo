@@ -1,8 +1,8 @@
 <?php
 
 
-require("functions.php");
-require("editModal.php");
+require_once "functions.php";
+require_once "editModal.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

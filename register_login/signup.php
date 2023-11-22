@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include("connection.php");
-    include("functions.php");
+    include_once "connection.php";
+    include_once "functions.php";
     check_logout($con);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){

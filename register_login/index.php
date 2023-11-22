@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-    require("connection.php");
-    require("functions.php");
+    require_once "connection.php";
+    require_once "functions.php";
     
     $user_data=check_login($con);    
 ?>

@@ -5,10 +5,10 @@
     session_start();
     include_once("./templates/head.php");
     echo "<link rel='stylesheet' href='stilus.css'>";
-    require("../register_login/connection.php");
-    require("../register_login/functions.php");
-    require("./editModal.php");
-    require_once("functions.php");
+    require_once "../register_login/connection.php";
+    require_once "../register_login/functions.php";
+    require_once "./editModal.php";
+    require_once "functions.php";
 
     ?>
 
