@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include("connection.php");
-    include("functions.php");
+    include_once "connection.php";
+    include_once "functions.php";
     check_logout($con);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -41,7 +41,7 @@
 <?php if(isset($_SESSION['status'])){ ?>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <p class="warn">
-                        <strong>Warning!</strong> 
+                        <strong>Warning!</strong>
                         <?php echo $_SESSION['status']; ?>
                     </p>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -54,7 +54,7 @@
             <p style="display: inline">Username:</p>
             <span class="username_info">?</span>
             <div class="test">
-               <p> Username can't contain any special characters or only numbers, 
+               <p> Username can't contain any special characters or only numbers,
                 and it has to be between 6 and 16 characters!</p>
             </div>
             <input class="text" type="text" name="user_name" maxlength="16">
@@ -74,11 +74,11 @@
 
             <p>Repeat password:</p>
             <input class="text" type="password" name="password2" maxlength="16">
-            
+
             <input id="button" type="submit" value="Sign up!">
 
             <p style="text-align:center"><a href="login.php">Click here to log in!</a></p>
         </form>
-    </div>  
+    </div>
 </body>
 </html>

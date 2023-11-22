@@ -3,12 +3,12 @@
 <body>
     <?php
     session_start();
-    include_once("./templates/head.php");
+    include_once "./templates/head.php";
     echo "<link rel='stylesheet' href='stilus.css'>";
-    require("../register_login/connection.php");
-    require("../register_login/functions.php");
-    require("./editModal.php");
-    require_once("functions.php");
+    require_once "../register_login/connection.php";
+    require_once "../register_login/functions.php";
+    require_once "./editModal.php";
+    require_once "functions.php";
 
     ?>
 
@@ -66,8 +66,8 @@
 
 <script>
 const edit = document.querySelectorAll(".edit");
-const editTitle = document.getElementById("editTitle"); 
-const editDesc = document.getElementById("editDesc"); 
+const editTitle = document.getElementById("editTitle");
+const editDesc = document.getElementById("editDesc");
 const hiddenInput = document.getElementById("hidden");
 console.log(edit,editTitle,editDesc);
             edit.forEach(element =>{

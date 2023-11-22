@@ -3,8 +3,8 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-require_once("../register_login/connection.php");
-require_once("../register_login/functions.php");
+require_once "../register_login/connection.php";
+require_once "../register_login/functions.php";
 
 $user_data = check_login($con);
 
@@ -41,5 +41,5 @@ function change_note($editTitle, $editDesc, $id) {
     $updateQuery="UPDATE `notes` SET `title`='$editTitle',`description`='$editDesc' WHERE `id`= '$id' ";
     $result = $con->query($updateQuery);
     //echo $editTitle, $editDesc, $id;
-    //return $result; 
+    //return $result;
 }

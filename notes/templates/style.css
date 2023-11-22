@@ -22,7 +22,7 @@ header {
 
 .header-title h1 {
     font-size: 82px;
-    font-family: Impact;
+    font-family: Impact, fantasy;
     color: #E9D985;
     margin: 0;
     text-decoration: overline;
@@ -34,7 +34,7 @@ header {
 }
 .logged-in h1{
     font-size: 22px;
-    font-family:Georgia, 'Times New Roman', Times;
+    font-family:Georgia, 'Times New Roman', Times, fantasy;
     color: #E9D985;
 }
 .sign-out{
@@ -42,6 +42,6 @@ header {
 }
 .sign-out a:link {
     font-size: 15px;
-    font-family:Georgia, 'Times New Roman', Times;
+    font-family:Georgia, 'Times New Roman', Times, fantasy;
     color:#fff;
 }
