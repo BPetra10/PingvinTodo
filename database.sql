@@ -20,7 +20,7 @@ FOREIGN KEY (user_id) REFERENCES users(uid))
 ENGINE = InnoDB;
 
 CREATE TABLE todoapp.notes 
-(`id` int(11) NOT NULL,
+(`id` int(11) NOT NULL AUTO_INCREMENT,
 `userid` bigint(20) NOT NULL,
 `title` varchar(255) NOT NULL,
 `description` text NOT NULL,
