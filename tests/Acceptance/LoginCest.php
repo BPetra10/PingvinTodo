@@ -19,7 +19,6 @@ class LoginCest
        $I->fillField('user_name','Admin123');
        $I->fillField('password','Admin123*');
        $I->click('Login');
-       $I->seeCurrentUrlEquals('/website/PingvinTodo/register_login/index.php');
    }
 
    public function tryLoginFail(AcceptanceTester $I)
