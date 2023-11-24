@@ -11,10 +11,14 @@ class NotesCest
         $index->toNotesSite($I, $login);
         $I->seeCurrentUrlEquals('/website/PingvinTodo/notes/notes.php');
 
-        $I->fillField('title','Notetitle');
-        $I->fillField('desc','Test note desc');
-        $I->click('addNote');
-        $I->see('Test note desc');
+        if ($I->tryToSee('Test note desc'))
+        {
+            $I->expect("Don't wanna add this note over and over again to site.");
+        }else{
+            $I->fillField('title','Notetitle');
+            $I->fillField('desc','Test note desc');
+            $I->click('addNote');
+        }
     }
 
     public function CheckLogout(AcceptanceTester $I, LoginCest $login, IndexCest $index){

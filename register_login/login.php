@@ -10,14 +10,14 @@
 
         if(!empty($user_name)&&!empty($password)&&!is_numeric($user_name)){
             $query="select * from users where user_name = '$user_name' limit 1";
-            
-            
+
+
             $result = mysqli_query($con, $query);
 
             if($result){
                 if($result && mysqli_num_rows($result) > 0)
                 {
-    
+
                     $user_data = mysqli_fetch_assoc($result);
                     if(password_verify($password, $user_data['password'])){
                         $_SESSION['user_name']=$user_data['user_name'];
@@ -31,7 +31,7 @@
             $_SESSION['status']= "Wrong username or password!";
         }else{
             $_SESSION['status']= "Please enter some valid information!";
-            
+
         }
     }
 ?>
@@ -50,7 +50,7 @@
     <?php if(isset($_SESSION['status'])){ ?>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <p class="warn">
-                        <strong>Warning!</strong> 
+                        <strong>Warning!</strong>
                         <?php echo $_SESSION['status']; ?>
                     </p>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

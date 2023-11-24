@@ -20,7 +20,7 @@ class LoginCest
        $I->amOnPage(PAGE);
        $I->fillField('user_name','Admin123');
        $I->fillField('password','Admin123*');
-       $I->click('Login');
+       $I->click('button');
    }
 
    public function tryLoginFail(AcceptanceTester $I)
@@ -28,7 +28,7 @@ class LoginCest
        $I->amOnPage(PAGE);
        $I->amGoingTo('submit user form with invalid values');
        $I->fillField('user_name','Admin123');
-       $I->click('Login');
+       $I->click('button');
        $I->expect('the form is not valid');
        $I->see('Warning! Please enter some valid information!');
        $I->seeCurrentUrlEquals('/website/PingvinTodo/register_login/login.php');
