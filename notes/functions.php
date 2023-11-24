@@ -14,8 +14,7 @@ function get_notes()
     $con = make_connection();
     $uid = $_SESSION["uid"];
     $getQuery = "SELECT * FROM `notes` WHERE `userid`='$uid'";
-    $result = $con->query($getQuery);
-    return $result;
+    return $con->query($getQuery);
 }
 
 function add_note($title, $desc)
@@ -33,13 +32,10 @@ function delete_note($id)
     $con = make_connection();
     $deleteQuery = "DELETE FROM `notes` WHERE id='$id';";
     $result = $con->query($deleteQuery);
-   // return $result;
 }
 
 function change_note($editTitle, $editDesc, $id) {
     $con = make_connection();
     $updateQuery="UPDATE `notes` SET `title`='$editTitle',`description`='$editDesc' WHERE `id`= '$id' ";
     $result = $con->query($updateQuery);
-    //echo $editTitle, $editDesc, $id;
-    //return $result;
 }

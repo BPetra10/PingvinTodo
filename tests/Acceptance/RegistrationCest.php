@@ -5,17 +5,19 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
+define("PAGE", "/register_login/signup.php");
+
 class RegistrationCest
 {
     public function tryPage(AcceptanceTester $I)
     {
-        $I->amOnPage('/register_login/signup.php');
+        $I->amOnPage(PAGE);
         $I->see('Sign Up');
     }
 
     public function tryWrongRegister(AcceptanceTester $I)
     {
-        $I->amOnPage('/register_login/signup.php');
+        $I->amOnPage(PAGE);
         $I->amGoingTo('submit user form with invalid values');
         $I->fillField('user_name','Admin123');
         $I->click('Sign up!');
@@ -26,7 +28,7 @@ class RegistrationCest
 
     public function clickToLoginInSignUp(AcceptanceTester $I)
     {
-        $I->amOnPage('/register_login/signup.php');
+        $I->amOnPage(PAGE);
         $I->click('a');
         $I->seeCurrentUrlEquals('/website/PingvinTodo/register_login/login.php');
     }
