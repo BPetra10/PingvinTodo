@@ -1,5 +1,5 @@
 <?php
-require_once("./functions.php");
+require_once "./functions.php";
 
 $hiddenValue = isset($_POST['hiddenInput']) ? $_POST['hiddenInput'] : '';
 $editDescValue = isset($_POST['editDesc']) ? $_POST['editDesc'] : '';

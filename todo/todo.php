@@ -8,8 +8,8 @@ include_once "functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="update_todo.css"> 
-    <link rel="stylesheet" href="todo.css"> 
+    <link rel="stylesheet" href="update_todo.css">
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
     <div class='parent'>
@@ -20,7 +20,7 @@ include_once "functions.php";
         </div>
         <div class='child'><h1 class="site_title">TODO List</h1></div>
     </div>
-    <p class="data">You are logged in as: <?php echo $_SESSION['user_name'];?> &nbsp; 
+    <p class="data">You are logged in as: <?php echo $_SESSION['user_name'];?> &nbsp;
     <a href="../register_login/logout.php" class="link">You want to sign out?</a>
     </p>
     <div class="container">
@@ -30,7 +30,7 @@ include_once "functions.php";
                 <button type="submit" name="add" id="btn">ADD</button>
             </div>
             <ul class="list">
-                <?php 
+                <?php
                     $itemList = get_todos_important();
                     while($row=$itemList->fetch_assoc())
                     {
@@ -48,7 +48,7 @@ include_once "functions.php";
             </ul>
             <hr>
             <ul class="list">
-                <?php 
+                <?php
                     $itemList = get_todos();
                     while($row=$itemList->fetch_assoc())
                     {
@@ -66,7 +66,7 @@ include_once "functions.php";
             </ul>
             <hr>
             <ul class="list">
-            <?php 
+            <?php
                     $itemList = get_todos_checked();
                     while($row=$itemList->fetch_assoc())
                     {
