@@ -9,6 +9,7 @@ body{
 
 .warn{
     margin-bottom: 0;
+    font-size: 1.2am;
 }
 
 a{
@@ -26,7 +27,8 @@ form>p{
     color: #e9d985;
     margin-top: 0.5em;
     margin-bottom: 0.3em;
-    font-size: large;
+    font-size: 1.25am;
+    
 }
 
 form{
