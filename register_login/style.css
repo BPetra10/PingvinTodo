@@ -17,6 +17,13 @@ a{
     color: #e9d985 !important;
  }
 
+ a:hover{
+    margin: 1em auto;
+    font-style: italic;
+    color: #bcd8c1 !important;
+    padding-left: 0.6em;
+}
+
 h2{ 
     text-align: center;
     margin-bottom: 0.5em !important;
