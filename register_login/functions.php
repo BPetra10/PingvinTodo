@@ -65,14 +65,10 @@ function check_username($result, $user_name){
             $result = mysqli_query($con,$query);
             if($result && mysqli_num_rows($result) > 0)
             {
-
-                $user_data = mysqli_fetch_assoc($result);
-
-                return $user_data;
+                return mysqli_fetch_assoc($result);
             }
         }
 
-        //redirect to login
         header("Location: login.php");
         die;
     }
