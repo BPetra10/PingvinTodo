@@ -28,7 +28,7 @@ form>p{
     margin-top: 0.5em;
     margin-bottom: 0.3em;
     font-size: 1.25am;
-    
+
 }
 
 form{
@@ -45,14 +45,19 @@ form{
 
 #button{
     padding: 0.6em;
-    width: 70%;
-    border-radius: 0.6em;
+    width: 50%;
+    border-radius: 0.5em;
     color: white;
     background-color: #007991;
     border: none;
     margin: 1em auto;
     display: block;
     font-size: large;
+}
+
+#button:hover{
+    background-color: #bcd8c1;
+    color: #222E50;
 }
 
 #box{
